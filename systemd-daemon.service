@@ -1,0 +1,13 @@
+[Unit]
+Description=Example Forking Script/Daemon
+DefaultDependencies=no
+After=local-fs.target
+
+[Service]
+ExecStart=/your/binary/file
+Restart=on-failure
+Type=forking
+PIDFile=/var/run/forking-daemon.pid
+
+[Install]
+WantedBy=multi-user.target
