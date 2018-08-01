@@ -1,0 +1,11 @@
+[Unit]
+Description=Example Service
+DefaultDependencies=no
+After=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/true
+
+[Install]
+WantedBy=multi-user.target
